@@ -2,12 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component'; // Webpack will bundle it, add extension
+import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component'; // Webpack will bundle it, add extension
 
 @NgModule({
   declarations: [
     AppComponent, // Angular doesn't recoignize all components by default, so we have to register them here
-  	ServerComponent
+  	ServerComponent, ServersComponent
   ],
   imports: [
     BrowserModule
