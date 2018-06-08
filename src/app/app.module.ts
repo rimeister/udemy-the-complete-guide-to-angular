@@ -8,7 +8,8 @@ import { ServersComponent } from './servers/servers.component'; // Webpack will 
 @NgModule({
   declarations: [
     AppComponent, // Angular doesn't recoignize all components by default, so we have to register them here
-  	ServerComponent, ServersComponent
+  	ServerComponent, 
+  	ServersComponent
   ],
   imports: [
     BrowserModule
