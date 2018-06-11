@@ -6,5 +6,11 @@ Property binding: The 'disable' property will update automatically when allowNew
 In addition to binding to HTML properties (e.g., 'disabled', demonstrated above) you can bind to other properties, such as Angular directives.
 
  -->
+
+<br><br>
+<p>{{ allowNewServer }}</p> <!-- Data binding with string interpolation -->
+<p [innerText]="allowNewServer"></p> <!-- Data binding with property binding -->
+
+<br>
 <app-server></app-server>
 <app-server></app-server>
