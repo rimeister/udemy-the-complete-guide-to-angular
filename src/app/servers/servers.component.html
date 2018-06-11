@@ -1,4 +1,3 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
 <!--
 
 Property binding: The 'disable' property will update automatically when allowNewServer updates. This is one of the main reasons to use Angular: It makes it easy to change things in the DOM at run time.
@@ -7,10 +6,14 @@ In addition to binding to HTML properties (e.g., 'disabled', demonstrated above)
 
  -->
 
-<br><br>
-<p>{{ allowNewServer }}</p> <!-- Data binding with string interpolation -->
-<p [innerText]="allowNewServer"></p> <!-- Data binding with property binding -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button><!-- You can bind to any of the events made available to you by the html attribute -->
+<!-- General rule: Don't put too much logic into your templates -->
 
+<br><br>
+<p>Allow new server? Info from string intepolation says: <strong>{{ allowNewServer }}</strong></p> <!-- Data binding with string interpolation -->
+<p>Allow new server? Info from property binding says: <strong [innerText]="allowNewServer"></strong></p> <!-- Data binding with property binding -->
+<br>
+<p><strong>{{ serverCreationStatus }}</strong></p> <!-- Updates dynamically (2-way binding) with string interpolation -->
 <br>
 <app-server></app-server>
 <app-server></app-server>
