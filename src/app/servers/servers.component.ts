@@ -9,6 +9,8 @@ export class ServersComponent implements OnInit {
 
 	allowNewServer = false;
 	serverCreationStatus = 'No server was created.';
+	serverName = '';
+
 
 	constructor() {
 		setTimeout( () => {
@@ -17,6 +19,11 @@ export class ServersComponent implements OnInit {
 	}
 
 	ngOnInit() {
+	}
+
+	onUpdateServerName(event: any) {
+		console.log(event);
+		this.serverName = (<HTMLInputElement>event.target).value; // <HTMLInputElement> tells TS that the type of the element on which the event is happening is an HTML input. "Explicit Casting" 
 	}
 
 	onCreateServer() {

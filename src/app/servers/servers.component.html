@@ -5,7 +5,12 @@ Property binding: The 'disable' property will update automatically when allowNew
 In addition to binding to HTML properties (e.g., 'disabled', demonstrated above) you can bind to other properties, such as Angular directives.
 
  -->
-
+<label for="Server Name"></label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)"><!-- Listens to input event, fires when user types. $event is a reserved variable name, is the data emitted with the event -->
+<br><br>
+{{ serverName }}
+<br>
+<br>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button><!-- You can bind to any of the events made available to you by the html attribute -->
 <!-- General rule: Don't put too much logic into your templates -->
 
