@@ -7,19 +7,12 @@ In addition to binding to HTML properties (e.g., 'disabled', demonstrated above)
  -->
 <label for="Server Name"></label>
 
-<h3>One-way data binding</h3>
-<input type="text" class="form-control" (input)="onUpdateServerName($event)">
-<!-- One-way data binding: Listens to input event, fires when user types. But, the value in the input won't update when serverName is updated in the code. 
-
-Sidenote: $event is a reserved variable name, is the data emitted with the event -->
-<br>
 <h3>Two-way Data binding</h3>
 <input type="text" class="form-control" [(ngModel)]="serverName">
 <!-- Two-way binding: on the input event, it will update the value of serverName in out TS code. When the value of serverName is updated in our TS code, it will also update in the element. -->
 
-<br><br>
-{{ serverName }}
-<br>
+<!-- {{ serverName }}
+ --><br>
 <br>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button><!-- You can bind to any of the events made available to you by the html attribute -->
 <!-- General rule: Don't put too much logic into your templates -->
