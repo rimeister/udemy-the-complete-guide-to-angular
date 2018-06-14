@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -12,7 +13,8 @@ import { ServersComponent } from './servers/servers.component'; // Webpack will 
   	ServersComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] // Which component to be aware of when the app is launched (i.e., which ones go in the index.html)
