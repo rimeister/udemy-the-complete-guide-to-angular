@@ -3,7 +3,12 @@ import { Component } from '@angular/core'; // Make @Component decorator known to
 // Decorators allow you to enhance your classes, tell Angular its a component
 @Component({
 	selector: 'app-server',
-	templateUrl: './server.component.html' // Relative to the TS file
+	templateUrl: './server.component.html', // Relative to the TS file
+	styles: [`
+		.online {
+			color: white;
+		}
+	`]
 })
 
 export class ServerComponent {
