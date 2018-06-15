@@ -22,7 +22,14 @@ In addition to binding to HTML properties (e.g., 'disabled', demonstrated above)
 <!-- <p>Allow new server? Info from property binding says: <strong [innerText]="allowNewServer"></strong></p> --> <!-- Data binding with property binding -->
 <br>
 <!-- * is required be ngIf to let it know that this is a structural directive, it updates the DOM -->
-<p *ngIf="serverCreated">Server was created. Server name is {{ serverName }}.</p> <!-- Updates dynamically (2-way binding) with string interpolation -->
+<p *ngIf="serverCreated; else noServer">Server was created. Server name is {{ serverName }}.</p>
+<ng-template #noServer>
+	<p>No server was created.</p>
+</ng-template>
+
+
+ <!-- Updates dynamically (2-way binding) with string interpolation -->
+
 <br>
 <app-server></app-server>
 <app-server></app-server>
