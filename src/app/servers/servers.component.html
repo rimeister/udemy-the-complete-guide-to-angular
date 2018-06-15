@@ -18,10 +18,11 @@ In addition to binding to HTML properties (e.g., 'disabled', demonstrated above)
 <!-- General rule: Don't put too much logic into your templates -->
 
 <br><br>
-<p>Allow new server? Info from string intepolation says: <strong>{{ allowNewServer }}</strong></p> <!-- Data binding with string interpolation -->
-<p>Allow new server? Info from property binding says: <strong [innerText]="allowNewServer"></strong></p> <!-- Data binding with property binding -->
+<!-- <p>Allow new server? Info from string intepolation says: <strong>{{ allowNewServer }}</strong></p> --> <!-- Data binding with string interpolation -->
+<!-- <p>Allow new server? Info from property binding says: <strong [innerText]="allowNewServer"></strong></p> --> <!-- Data binding with property binding -->
 <br>
-<p><strong>{{ serverCreationStatus }}</strong></p> <!-- Updates dynamically (2-way binding) with string interpolation -->
+<!-- * is required be ngIf to let it know that this is a structural directive, it updates the DOM -->
+<p *ngIf="serverCreated">Server was created. Server name is {{ serverName }}.</p> <!-- Updates dynamically (2-way binding) with string interpolation -->
 <br>
 <app-server></app-server>
 <app-server></app-server>
