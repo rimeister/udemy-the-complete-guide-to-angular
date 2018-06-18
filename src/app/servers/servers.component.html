@@ -28,5 +28,7 @@ In addition to binding to HTML properties (e.g., 'disabled', demonstrated above)
  <!-- Updates dynamically (2-way binding) with string interpolation -->
 
 <br>
-<app-server></app-server>
-<app-server></app-server>
+<!-- ngFor loop. Uses * at start because it is a structural directive (changes DOM) -->
+<!-- define a temporary variable inside the loop ('server'). 'Servers' was defined in the the TS file -->
+<!-- same structure as normal JS for-of loop -->
+<app-server *ngFor="let server of servers"></app-server>
