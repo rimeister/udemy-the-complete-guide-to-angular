@@ -1,4 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-.highlight {
+
+ol.server-list {
+	list-style: none; 
+	counter-reset: li;
+}
+
+ol.server-list li {
+	counter-increment: li;
+}
+
+ol.server-list li::before {
+    content: counter(li);
+    color: red;
+    display: inline-block;
+    margin-left: -1.5em;
+    padding-right: 1em;
+    padding-left: 0.5em;
+	width: 2.5em;
+    text-align: left;
+    direction: rtl;
+}
+
+ol.server-list li.highlight {
 	color: white;
 }
+
+ol.server-list li.highlight::before {
+	background-color: blue;
+	color: white;
+}
+

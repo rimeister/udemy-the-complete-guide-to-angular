@@ -14,7 +14,7 @@
     <div class="col-xs-12">
       <button (click)="toggleText()">Display Details</button>
       <p [ngStyle]="{display: toggleStyle()}">Secret Password = tuna</p>
-      <ol>
+      <ol class="server-list">
         <li *ngFor="let now of clicks; let i = index" [ngStyle]="{backgroundColor: setBackgroundColor(i)}" [ngClass]="i>3 ? 'highlight': ''">The button was clicked at {{ now }}</li>
       </ol>
     </div>
