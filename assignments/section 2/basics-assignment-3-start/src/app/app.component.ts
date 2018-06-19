@@ -26,19 +26,6 @@ export class AppComponent {
 
 	}
 
-	toggleStyle() {
-
-
-		var displayVal;
-		if (this.showText) {
-			displayVal = 'block';
-		} else {
-			displayVal = 'none';
-		}
-
-		return displayVal;
-	}
-
 	setBackgroundColor(index) {
 		var bgColor;
 
